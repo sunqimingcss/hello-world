@@ -1,4 +1,4 @@
-//立即执行函数表达式（IIFE）不再必要了IIFE 写法
+1.立即执行函数表达式（IIFE）不再必要了IIFE 写法
 (function () {
   var tmp = ...;
   ...
@@ -8,4 +8,23 @@
 {
   let tmp = ...;
   ...
+}
+2.遍历map
+var map = new Map();
+map.set('first', 'hello');
+map.set('second', 'world');
+
+for (let [key, value] of map) {
+  console.log(key + " is " + value);
+}
+// first is hello
+// second is world
+// 获取键名
+for (let [key] of map) {
+  // ...
+}
+
+// 获取键值
+for (let [,value] of map) {
+  // ...
 }
